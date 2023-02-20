@@ -103,7 +103,7 @@ func Viewmyorders(c *gin.Context) {
 		var ordercount int
 		_ = db.QueryRow("SELECT count(id)  FROM tbl_orders WHERE user_id = ? ", userid).Scan(&ordercount)
 
-		c.HTML(200, "myorder.html", gin.H{"orderlist": res2, "orderscount": ordercount, "name": name})
+		c.HTML(200, "myorder.tmpl", gin.H{"orderlist": res2, "orderscount": ordercount, "name": name})
 
 		defer db.Close()
 	}
