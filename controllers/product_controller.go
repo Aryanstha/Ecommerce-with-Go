@@ -82,7 +82,7 @@ func Productlist(c *gin.Context) {
 
 		fmt.Println("ordercount", ordercount)
 
-		c.HTML(200, "products.html", gin.H{"products": res, "orderscount": ordercount, "name": firstname})
+		c.HTML(200, "products.tmpl", gin.H{"products": res, "orderscount": ordercount, "name": firstname})
 	}
 
 }
