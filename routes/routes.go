@@ -10,7 +10,7 @@ import (
 func SetupRoutes(db *sql.DB) *gin.Engine {
 
 	r := gin.Default()
-	r.LoadHTMLGlob("templates/*/*.html")
+	r.LoadHTMLGlob("templates/*/*.tmpl")
 	r.Static("/assets", "./assets")
 
 	r.GET("/", controllers.Home)
