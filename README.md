@@ -18,7 +18,7 @@ To get started with this project, you will need to have Go installed on your sys
 - Clone the repository to your local machine
 - Navigate to the project directory
 - Run the command go run main.go to start the server
-- Open your browser and go to http://localhost:8080 to view the project
+- Open your browser and go to http://localhost:5000 to view the project
 
 #Project Structure
 The project is structured as follows:
