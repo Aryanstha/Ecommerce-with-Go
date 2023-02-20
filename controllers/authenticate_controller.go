@@ -132,7 +132,7 @@ func Register(c *gin.Context) {
 
 		c.Redirect(301, "/index")
 	} else {
-		c.HTML(200, "register.html", gin.H{"data": "*Already used this Email id "})
+		c.HTML(200, "register.tmpl", gin.H{"data": "*Already used this Email id "})
 	}
 
 }
@@ -155,7 +155,7 @@ func Logout(c *gin.Context) {
 		fmt.Println(er)
 	} else {
 
-		c.HTML(200, "login.html", nil)
+		c.HTML(200, "login.tmpl", nil)
 	}
 }
 
