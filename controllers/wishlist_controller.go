@@ -98,7 +98,7 @@ func Wishlist(c *gin.Context) {
 
 		name := session.Values["firstname"]
 
-		c.HTML(200, "wishlist.html", gin.H{"wishlist": res1, "orderscount": ordercount, "name": name})
+		c.HTML(200, "wishlist.tmpl", gin.H{"wishlist": res1, "orderscount": ordercount, "name": name})
 
 		defer db.Close()
 	}
